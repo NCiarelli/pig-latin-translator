@@ -1,0 +1,15 @@
+{
+  "name": "testsintro",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "description": ""
+}
