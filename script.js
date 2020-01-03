@@ -1,10 +1,18 @@
+// PIG LATIN TRANSLATOR FUNCTIONS
+// To Add: Checking for more than whitespaces
+
 function translate(inputString) {
   let result = "";
 
   const seperator = /\s+/;
+  // Split string by spaces between words after trimming any spaces on the ends.
+  // Treats multiple spaces as one separator
+  // NOT CURRENTLY WORKING CORRECTLY, TODO: needs to handle trailing spaces, and different types of spaces
   let strArray = inputString.split(seperator);
   // console.log(strArray);
+  // Runs through each split word and adds a space and the translated word to the result string
   for (let i = 0; i < strArray.length; i++) {
+    // Check that this isn't the first word which doesn't need a space
     if (i > 0) {
       result += " ";
     }
@@ -19,6 +27,7 @@ function translate(inputString) {
 
 function getPigLatin(word) {
   let unModTempString = word;
+  // Create a string with all lowercase of the input to avoid problems with capitalization
   let tempString = unModTempString.toLowerCase();
   let results;
   // let beginningChar;
@@ -112,10 +121,13 @@ function ifVowel(x) {
 //       }
 //     }
 
+
+// CODE FOR SETUP TO RUN
 if (typeof module !== "undefined") {
+  // RUN FOR TESTING
   module.exports = { translate };
 } else {
-  // Browser
+  // RUN FOR BROWSER
   document.querySelector("form").addEventListener("submit", e => {
     e.preventDefault();
     let formData = new FormData(e.target);

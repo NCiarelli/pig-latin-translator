@@ -11,5 +11,13 @@
   "devDependencies": {
     "jest": "^24.9.0"
   },
-  "description": ""
+  "description": "Some functions, small interface, and test cases for translating English words into pig latin.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NCiarelli/pig-latin-translator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NCiarelli/pig-latin-translator/issues"
+  },
+  "homepage": "https://github.com/NCiarelli/pig-latin-translator#readme"
 }
